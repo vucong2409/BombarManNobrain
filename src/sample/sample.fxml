@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:game_sprite/map.png" />
+         </image>
+      </ImageView>
+      <ImageView pickOnBounds="true" preserveRatio="true" x="970.0" y="260.0" fx:id="player">
+         <image>
+            <Image url="file:game_sprite/walkdown/walkdown1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
