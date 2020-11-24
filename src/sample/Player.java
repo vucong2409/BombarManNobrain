@@ -27,6 +27,10 @@ public class Player extends GameObject  {
     private long delay = 0;
     private double realSpeed = 0.1;
 
+    public Player() {
+
+    }
+
     public Player(ImageView img_) {
         this.axisX = img_.getX();
         this.axisY = img_.getY();
@@ -45,6 +49,14 @@ public class Player extends GameObject  {
             }
         }
         return state;
+    }
+
+    public double getRealSpeed() {
+        return realSpeed;
+    }
+
+    public void setRealSpeed(double realSpeed) {
+        this.realSpeed = realSpeed;
     }
 
     public void Walk(int direction, Map map) {

@@ -28,6 +28,10 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         AnchorPane field = (AnchorPane) root.lookup("#field");
         ImageView player = (ImageView) root.lookup("#player");
+        ImageView enemy = new ImageView(new Image("file:game_sprite/walkdown/walkdown1.png"));
+        enemy.setX(500);
+        enemy.setY(500);
+        field.getChildren().add(enemy);
         Map map = new Map();
         ImageView img1 = new ImageView();
         img1.setImage(new Image("file:game_sprite/table.png"));
@@ -40,12 +44,16 @@ public class Main extends Application {
             field.getChildren().add(table.avatar);
         }
         Player player1 = new Player(player);
-
+        Enemy ene = new Enemy(enemy);
         final int[] numOfBomb = {0};
         primaryStage.addEventHandler(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {
                 switch (keyEvent.getCode()) {
+                    case E: {
+                        ene.Walk(ene.Tracking(player1), map);
+                        break;
+                    }
                     case UP: {
                         player1.Walk(3, map);
                         break;

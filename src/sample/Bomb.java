@@ -29,7 +29,6 @@ public class Bomb {
     }
 
     public void Explode(Player player) {
-
         player.Death();
     }
 }
